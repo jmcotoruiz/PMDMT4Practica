@@ -7,8 +7,8 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="388dp"
-        android:layout_height="99dp"
+        android:layout_width="286dp"
+        android:layout_height="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -19,16 +19,16 @@
 
         <RadioButton
             android:id="@+id/radioButton1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Rad1"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="@string/Rad2"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

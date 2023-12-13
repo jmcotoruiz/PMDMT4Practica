@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.ImageView;
@@ -17,7 +18,8 @@ import java.util.Random;
  * Use the {@link FragmentoAvatar#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentoAvatar extends Fragment {
+public class FragmentoAvatar extends Fragment
+{
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -28,10 +30,11 @@ public class FragmentoAvatar extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    ImageView img1,img2;
+    ImageView imgPersonaje,imgProfesion;
     View  view;
     TextView vida, magia, fuerza, velocidad;
     ProgressBar barraVida, barraMagia, barraFuerza, barraVelocidad;
+    Button botonVolver;
     public FragmentoAvatar() {
         // Required empty public constructor
     }
@@ -63,6 +66,9 @@ public class FragmentoAvatar extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragmento, container, false);
 
+        imgPersonaje = view.findViewById(R.id.imageView);
+        imgProfesion = view.findViewById(R.id.imageView3);
+
         barraVida = view.findViewById(R.id.progressBarVi);
         barraMagia = view.findViewById(R.id.progressBarM);
         barraFuerza = view.findViewById(R.id.progressBarF);
@@ -71,6 +77,7 @@ public class FragmentoAvatar extends Fragment {
         magia = view.findViewById(R.id.textViewPM);
         fuerza = view.findViewById(R.id.textViewPF);
         velocidad = view.findViewById(R.id.textViewPVe);
+
         return view;
     }
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
@@ -108,7 +115,74 @@ public class FragmentoAvatar extends Fragment {
             barraMagia.setProgress(randomMagia);
             barraFuerza.setProgress(randomFuerza);
             barraVelocidad.setProgress(randomVelocidad);
-
+            //imagenes
+            if(especieFinal.equals("Elfo"))
+            {
+                if(sexoFinal.equals("Hombre"))
+                {
+                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                    Log.d("pasandoDatos", "La imagen de especie es elfo");
+                }
+                else
+                {
+                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                }
+            }
+            if(especieFinal.equals("Enano"))
+            {
+                if(sexoFinal.equals("Hombre"))
+                {
+                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                }
+                else
+                {
+                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                }
+            }
+            if(especieFinal.equals("Hobbit"))
+            {
+                if(sexoFinal.equals("Hombre"))
+                {
+                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                }
+                else
+                {
+                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                }
+            }
+            if(especieFinal.equals("Humano"))
+            {
+                if(sexoFinal.equals("Hombre"))
+                {
+                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                }
+                else
+                {
+                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                }
+            }
+            if(profesionFinal.equals("Arquero"))
+            {
+                imgProfesion.setImageResource(R.drawable.arquero);
+            }
+            if(profesionFinal.equals("Guerrero"))
+            {
+                imgProfesion.setImageResource(R.drawable.guerrero);
+            }
+            if(profesionFinal.equals("Mago"))
+            {
+                imgProfesion.setImageResource(R.drawable.mago);
+            }
+            if(profesionFinal.equals("Herrero"))
+            {
+                imgProfesion.setImageResource(R.drawable.herrero);
+            }
+            if(profesionFinal.equals("Minero"))
+            {
+                imgProfesion.setImageResource(R.drawable.minero);
+                Log.d("pasandoDatos", "La imagen es minero");
+            }
         }
     }
+
 }

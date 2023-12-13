@@ -1,5 +1,7 @@
 package es.studium.midialogo;
 
+import static android.app.PendingIntent.getActivity;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -83,30 +85,37 @@ public class MainActivity extends AppCompatActivity implements OnDialogoNombreLi
         }
         if (id == R.id.botonAvatar)
         {
-            Fragmento = fm.findFragmentByTag("avatar");//lo mismo que arriba
-            if(Fragmento == null)
+            if(txtNombre.getText().toString().isEmpty() || txtSexo.getText().toString().isEmpty() || txtEspecie.getText().toString().isEmpty() || txtProfesion.getText().toString().isEmpty())
             {
-                //Creamos un bundle, que contendrá los datos a pasar
-                Bundle datos = new Bundle();
-                //Ponemos todos los datos que queremos pasar, formato clave:valor
-                datos.putString("Nombre", Nombre);
-                datos.putString("Sexo", Sexo);
-                datos.putString("Especie", Especie);
-                datos.putString("Profesion", Profesion);
+                Toast.makeText(this, "Faltan datos por rellenar", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Fragmento = fm.findFragmentByTag("avatar");//lo mismo que arriba
+                if (Fragmento == null) {
+                    //Creamos un bundle, que contendrá los datos a pasar
+                    Bundle datos = new Bundle();
+                    //Ponemos todos los datos que queremos pasar, formato clave:valor
+                    datos.putString("Nombre", Nombre);
+                    datos.putString("Sexo", Sexo);
+                    datos.putString("Especie", Especie);
+                    datos.putString("Profesion", Profesion);
 
-                Log.d("voyameter","Nombre " +Nombre);
-                Log.d("voyameter","Sexo " +Sexo);
-                Log.d("voyameter","Profesion " +Profesion);
-                Log.d("voyameter","Especie " +Especie);
+                    Log.d("voyameter", "Nombre " + Nombre);
+                    Log.d("voyameter", "Sexo " + Sexo);
+                    Log.d("voyameter", "Profesion " + Profesion);
+                    Log.d("voyameter", "Especie " + Especie);
 
-                //Creamos el fragment
-                Fragment fragmento = new FragmentoAvatar();
-                //Asignamos los datos
-                fragmento.setArguments(datos);
+                    //Creamos el fragment
+                    Fragment fragmento = new FragmentoAvatar();
+                    //Asignamos los datos
+                    fragmento.setArguments(datos);
 
-                ft = fm.beginTransaction();
-                ft.replace(R.id.contenedorFragmento, fragmento, "avatar");
-                ft.commit();
+                    ft = fm.beginTransaction();
+                    ft.replace(R.id.contenedorFragmento, fragmento, "avatar");
+                    ft.commit();
+                }
+
             }
         }
     }
@@ -114,12 +123,12 @@ public class MainActivity extends AppCompatActivity implements OnDialogoNombreLi
     @Override
     public void onDialogoGuardarListener()
     {
-        Toast.makeText(this,  "Se ha guardado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,  "Dato asignado", Toast.LENGTH_SHORT).show();
     }
     @Override
     public void OnDialogoCancelarListener()
     {
-        Toast.makeText(this,  "Se ha cancelado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,  "Cancelado", Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onDataSetNombre(String nombre) //para capturar la información

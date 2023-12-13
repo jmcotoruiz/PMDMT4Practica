@@ -7,8 +7,9 @@
 
     <Spinner
         android:id="@+id/spinnerEspecies"
-        android:layout_width="222dp"
-        android:layout_height="27dp"
+        android:layout_width="233dp"
+        android:layout_height="50dp"
+        android:textSize="20sp"
         android:entries="@array/listaEspecies"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
