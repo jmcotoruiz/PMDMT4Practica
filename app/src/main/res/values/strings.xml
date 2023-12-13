@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MyAvatar</string>
+    <string name="botonNombre">Nombre</string>
+    <string name="botonSexo">Sexo</string>
+    <string name="botonEspecie">Especie</string>
+    <string name="botonProfesion">Profesión</string>
+    <string name="botonAvatar">Crear Avatar</string>
+    <string name="botonVolver">Volver</string>
+    <string name="Rad1">Hombre</string>
+    <string name="Rad2">Mujer</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string-array name="listaEspecies">
+        <item>Elfo</item>
+        <item>Enano</item>
+        <item>Hobbit</item>
+        <item>Humano</item>
+    </string-array>
+    <string-array name="listaProfesion">
+        <item>Arquero</item>
+        <item>Guerrero</item>
+        <item>Mago</item>
+        <item>Herrero</item>
+        <item>Minero</item>
+    </string-array>
+    <string name="poderes">Poderes</string>
+    <string name="vida">Vida</string>
+    <string name="magia">Magia</string>
+    <string name="fuerza">Fuerza</string>
+    <string name="velocidad">Velocidad</string>
+</resources>
