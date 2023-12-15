@@ -120,45 +120,45 @@ public class FragmentoAvatar extends Fragment
             {
                 if(sexoFinal.equals("Hombre"))
                 {
-                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                    imgPersonaje.setImageResource(R.drawable.elf_male);
                     Log.d("pasandoDatos", "La imagen de especie es elfo");
                 }
                 else
                 {
-                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                    imgPersonaje.setImageResource(R.drawable.elf_female);
                 }
             }
             if(especieFinal.equals("Enano"))
             {
                 if(sexoFinal.equals("Hombre"))
                 {
-                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                    imgPersonaje.setImageResource(R.drawable.dwarf_male);
                 }
                 else
                 {
-                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                    imgPersonaje.setImageResource(R.drawable.dwarf_female);
                 }
             }
             if(especieFinal.equals("Hobbit"))
             {
                 if(sexoFinal.equals("Hombre"))
                 {
-                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                    imgPersonaje.setImageResource(R.drawable.hobbit_male);
                 }
                 else
                 {
-                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                    imgPersonaje.setImageResource(R.drawable.hobbit_female);
                 }
             }
             if(especieFinal.equals("Humano"))
             {
                 if(sexoFinal.equals("Hombre"))
                 {
-                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                    imgPersonaje.setImageResource(R.drawable.warrior_male);
                 }
                 else
                 {
-                    imgPersonaje.setImageResource(R.drawable.sagitario);
+                    imgPersonaje.setImageResource(R.drawable.warrior_female);
                 }
             }
             if(profesionFinal.equals("Arquero"))
